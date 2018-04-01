@@ -50,12 +50,14 @@ class Student {
       System.out.println(result2);
 
       Student user1 = new Student("user1", 25); // 传入初值
+      System.out.println("----------------------");
       System.out.println(user1.name);
       System.out.println(user1.age);
       System.out.println(user1.height);
       System.out.println(user1.gender);
 
       Student user2 = new Student("user2", 30, 1.70, "男");
+      System.out.println("----------------------");
       System.out.println(user2.name);
       System.out.println(user2.age);
       System.out.println(user2.height);
