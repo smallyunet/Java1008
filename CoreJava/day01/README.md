@@ -42,7 +42,7 @@ http://oracle.com.edgesuite.net/timeline/java/
 
 - High performance 高性能
 
-- Robust 健壮 
+- Robust 健壮
 
 - Secure 安全
 
@@ -112,7 +112,7 @@ Linux执行`$echo PATH`
 
 ### Java程序与C、C++程序执行过程有何不同？
 
-C、C++经过编译链接后直接执行；Java被编译为.class后要再经过解释才执行。
+C、C++经过编译链接后直接执行；Java被编译为.class后要再经过虚拟机的解释编程特定平台的机器指令才执行。
 
 Java的执行过程有编译有解释，所以Java语言是编译型语言和解释型语言的结合体。
 
@@ -146,7 +146,7 @@ Java文件经过编译后的.class文件，一定是一个类对应一个文件�
 
 javac编译的时候，后面的文件名大小写不区分（Windows）；java执行的时候，文件大小写区分。
 
-（编译的时候后面的参数是路径名，Windows平台不区分大小写；解释的时候后面的参数是类名可能）
+（编译的时候后面的参数是路径名，Windows平台不区分大小写；解释的时候后面的参数是类名）
 
 ### 课后任务：安装其他Java开发IDE
 
