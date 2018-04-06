@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<webapp xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsl="http://www.w3.org/2001/XMLSchema-instance"
+    xsl:schemaLocation="http://java.sun.com/xml/ns/javaee
+    http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+    version="2.5">
+    <display-name>Welcome to Tomcat</display-name>
+    <description>
+        Welcome to Tomcat
+    </description>
+    
+    <error-page>
+        <error-code>500</error-code>
+        <location>error.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>404</error-code>
+        <location>error.jsp</location>
+    </error-page>
+    <error-page>
+        <exception-type>java.lang.NullPointerException</exception-type>
+        <location>error.jsp</location>
+    </error-page>
+</webapp>
