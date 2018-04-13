@@ -1,6 +1,6 @@
 ### 简介
 
-本目录的内容，是阅读《Java Web开发实战经典》过程中，跟随书本写下的练习代码。在每一个章节结束后，稍微作非常非常非常简要的回顾。
+本目录的内容，是阅读《Java Web开发实战经典》过程中，跟随书本写下的练习代码。在每一个章节结束后，稍微作非常非常非常简单的回顾。
 
 #### 开始使用JSP
 
@@ -30,8 +30,69 @@ JSP主要有9个内置对象。
 
 关于Cookie的操作，因为cookie是服务端设置到客户端上去的，所以要用response来添加cookie。取出cookie则使用request。
 
-6.5是关于session对象的内容。在java web中，session只能用在HTTP协议中。
+6.5是关于session对象的内容。在java web中，session只能使用于HTTP协议。
 
-6.6的application对象可取得当前程序文件执行的真实目录，可以利用这个来执行一些对文件的操作，持久化数据。
+6.6的application对象可取得当前程序文件执行的真实目录，可以利用这一点来执行一些对文件的操作，持久化数据。
 
 6.7内容关于Web安全性，即WEB-INF目录下的文件是绝对安全的，如果要外部访问，需要在web.xml中手动配置。web.xml中也可配置一些简单的初始化数据。
+
+#### JavaBean
+
+JavaBean可将HTML代码和Java代码分离，HTML页面中使用import导入类或者使用`<jsp:userBean/>`标签声明使用指定类。
+
+JavaBean中的Java程序，如果需要操作属性，必须按照规范编写对应的get和set方法，因为JavaBean标签形式操作属性，默认调用get和set。
+
+将Java编译生成的class文件放到 WEB-INF/classes 目录下，服务器会自动搜寻类。
+
+关于服务器环境，JDK版本一定要不超过8。无论tomcat版本是8还是9，都无法识别JDK9以上版本编译出的class文件。
+
+遇到服务器内部错误时，页面上没有明确的错误信息，包正确导入，但无法正常执行。网上关于该错误信息的言论也不只一种。有认为JDK和JRE版本不一致的，也有认为Tomcat版本过低的。如果检查确认程序没有写错，可以尝试更换JDK版本。
+
+检查Java程序有没有写错，可以单独写一个类来调用测试该程序。而不只是查看JSP页面上的错误信息。
+
+7.8是JavaBean的示例操作，使用正则验证用户由表单输入的信息是否符合要求，错误信息使用Map保存。检查页面调用验证方法，根据不同的检查结果进行页面跳转。
+
+**DAO设计模式**
+
+DAO（Data Access Object，数据访问对象）在程序的标准开发架构中属于数据层的操作，主要功能是数据操作。DAO设计模式大致由6部分组成：
+
+- DatabaseConnection: 专门负责数据库的打开与关闭
+
+- VO：主要由属性的setter、getter方法组成
+
+- DAO：定义操作接口，实现CRUD操作
+
+- Impl：DAO接口的实现类
+
+- Proxy：代理实现类
+
+- Factory：工厂类
+
+包名的命名也要求规范：
+
+| 类 | 包名 |
+| --- | --- |
+| 数据库连接 | xxx.dbc.DatabaseConnection |
+| DAO接口 | xxx.dao.XxxDAO |
+| DAO主题类 | xxx.dao.impl.XxxDAOImpl |
+| DAO代理类 | xxx.dao.proxy.XxxDAOProxy |
+| VO类 | xxx.vo.Xxx |
+| 工厂类 | xxx.factory.DAOFactory |
+
+7.9节使用了DAO设计模式来完成一个简单的实例，实例对本地数据库进行操作，可添加数据和查询数据。
+
+7.9节的实例文件共6个，分别对应设计模式规划的6个部分，其包结构如下：
+
+![dao_package](7.9/dao_package.png)
+
+这6个类的功能关系、调用流程：
+
+![dao_uml](7.9/dao_uml.png)
+
+IEmpDAO是DAO接口，EmpDAOImpl是主题实现类，EmpDAOProxy是代理类，Emp即VO，DatabaseConnection专门实现数据库的连接与关闭。
+
+测试程序从工厂类 DAOProxy 中获取的是代理类 EmpDAOProxy 对象，代理类通过使用主题类 EmpDAOImpl 完成数据操作，主题类和代理类均使用到了 Emp 和 DatabaseConnection。
+
+因为DAO是一种设计模式，所以从功能上来看，整个流程只是完成了一些数据操作的功能，不同的是加入了一些工程化的流程和规范，这也是我们需要重点学习的地方。
+
+程序编写完成后，先写两个测试程序来验证程序是否正常执行，之后在JSP页面调用相应的功能即可。

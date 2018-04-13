@@ -1,0 +1,9 @@
+USE mldn;
+DROP TABLE IF EXISTS emp;
+CREATE TABLE emp(
+    empno INT(4) PRIMARY KEY,
+    ename VARCHAR(10),
+    job VARCHAR(9),
+    hiredate DATE,
+    sal FLOAT(7,2)
+);
