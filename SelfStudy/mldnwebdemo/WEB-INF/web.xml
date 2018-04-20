@@ -31,4 +31,19 @@
         <servlet-name>dbinit</servlet-name>
         <url-pattern>/config.mldn</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>server</servlet-name>
+        <servlet-class>org.lxh.servletdemo.ServerRedirectDemo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>server</servlet-name>
+        <url-pattern>/9.7/ServerRedirectDemo</url-pattern>
+    </servlet-mapping>
+
+    <listener>
+        <listener-class>
+            org.lxh.listenerdemo.OnlineUserList
+        </listener-class>
+    </listener>
 </web-app>

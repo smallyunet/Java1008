@@ -1,5 +1,21 @@
 ### 2018.04
 
+#### 20
+
+![img](img/20.png)
+
+#### 17
+
+![img](img/17.png)
+
+#### 16
+
+![img](img/16.1.png)
+
+![img](img/16.2.png)
+
+![img](img/16.3.png)
+
 #### 15
 
 ![img](img/15.png)

@@ -96,3 +96,21 @@ IEmpDAO是DAO接口，EmpDAOImpl是主题实现类，EmpDAOProxy是代理类，E
 因为DAO是一种设计模式，所以从功能上来看，整个流程只是完成了一些数据操作的功能，不同的是加入了一些工程化的流程和规范，这也是我们需要重点学习的地方。
 
 程序编写完成后，先写两个测试程序来验证程序是否正常执行，之后在JSP页面调用相应的功能即可。
+
+#### Servlet
+
+Servlet包是tomcat的库，可能不在系统默认的环境变量中。
+
+Servlet程序的生命周期受到Web容器的控制，当一个Servlet被实例化后，容器会调用init()方法。当有请求提交时，Servlet将调用service()方法。
+
+9.8节提到了Web开发的两种模式。模式1使用JSP + JavaBean的结构，适合小型程序开发。
+
+模式2即MVC模式，JSP、JavaBean和Servlet分别对应V、M、C。Servlet处理请求，可调用JavaBean；JavaBean使用DAO模式执行数据操作；JSP进行输出。
+
+9.9节是实例操作，使用MVC设计模式完成一个简单的登录验证功能。
+
+Servlet具备很多JSP不具备的功能，Servlet包括简单Servlet、过滤Servlet和监听Servlet。
+
+过滤Servlet可对指定路径的请求进行过滤，可应用于编码过滤、权限验证等。
+
+监听Servlet是对ServletContext的监听，像设置属性、删除属性。
