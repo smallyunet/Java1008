@@ -46,4 +46,26 @@
             org.lxh.listenerdemo.OnlineUserList
         </listener-class>
     </listener>
+
+    <servlet>
+        <servlet-name>ELServlet</servlet-name>
+        <servlet-class>
+            org.lxh.eldemo.servlet.ELServlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ELServlet</servlet-name>
+        <url-pattern>/10.4/ELServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ELListServlet</servlet-name>
+        <servlet-class>
+            org.lxh.eldemo.servlet.ELListServlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ELListServlet</servlet-name>
+        <url-pattern>/10.4/ELListServlet</url-pattern>
+    </servlet-mapping>
 </web-app>
