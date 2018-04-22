@@ -19,15 +19,14 @@ if (true)
 > 职责单一原则（封装）：某个类的功能是单一的，方法的功能是单一的 
 > 通用功能独立实现（重用）
 
-#### 循环结构
+关于Switch的用法，可以将default提到case前面，会执行，但是注意break的控制流程；default只有当所有case匹配不到时执行；case后面的条件只能是常量。
+
+Switch后面的括号只能放byte、short、int、char、String类型，其他类型不可以。尤其注意不能放long型数据。
+
+Switch支持多个case共享一段代码。
+
+default、case是java关键字，一般只在Switch这里出现。
 
 ### Task
 
-
-1. 控制台接收张浩的 Java 成绩，如果张浩的Java考试成绩大于98分，张浩就能获得一个MP4作为奖励
-
-> ./Task/Task1
-
-2. 控制台接收张浩的 Java 成绩，音乐成绩。当张浩Java成绩大于98分，而且音乐成绩大于80分，老师奖励他；或者Java成绩等于100分，音乐成绩大于70分，老师也可以奖励他
-
-> ./Task/Task2
+> ./Task/Task*
