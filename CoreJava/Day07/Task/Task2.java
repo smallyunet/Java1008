@@ -5,8 +5,9 @@
 package com.ychs168.corejava;
 
 /**
- * 控制台接收张浩的 Java 成绩，如果张浩的Java考试成绩大于98分，张浩就能获得一个MP4作为奖励
- * 
+ *  控制台接收张浩的 Java 成绩，音乐成绩。
+ *  当张浩Java成绩大于98分，而且音乐成绩大于80分，老师奖励他；
+ *  或者Java成绩等于100分，音乐成绩大于70分，老师也可以奖励他
  */
 public class Task2 {
     public static void main(String[] args) {
