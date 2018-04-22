@@ -68,4 +68,26 @@
         <servlet-name>ELListServlet</servlet-name>
         <url-pattern>/10.4/ELListServlet</url-pattern>
     </servlet-mapping>
+
+    <resource-ref>
+        <description>DB Connection</description> 
+        <res-ref-name>jdbc/mldn</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
+
+    <jsp-config>
+        <taglib>
+            <taglib-uri>mldn_hello</taglib-uri>
+            <taglib-location>/WEB-INF/hellotag.tld</taglib-location>
+        </taglib>
+        <taglib>
+            <taglib-uri>mldn_date</taglib-uri>
+            <taglib-location>/WEB-INF/datatag.tld</taglib-location>
+        </taglib>
+        <taglib>
+            <taglib-uri>mldn</taglib-uri>
+            <taglib-location>/WEB-INF/mldntag.tld</taglib-location>
+        </taglib>
+    </jsp-config>
 </web-app>
