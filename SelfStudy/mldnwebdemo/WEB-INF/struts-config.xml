@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+<struts-config>
+    <form-beans>
+        <form-beans name="helloForm" type="org.lxh.struts.form.HelloForm" />
+    </form-beans>
+    <global-exceptions />
+    <global-forwards />
+    <action-mappings>
+        <action attribute="helloForm" input="/15.3/hello.jsp" name="helloForm" path="/15.3/hello" scope="request" type="org.lxh.struts.action.HelloAction">
+            <forward name="show" path="/15.3/hello.jsp"></forward>
+        </action>
+    </action-mappings>
+    <message-resources parameter="org.lxh.struts.ApplicationResources" />
+</struts-config>

@@ -25,4 +25,40 @@
             <rtexprvalue>true</rtexprvalue>
         </attribute>
     </tag>
+
+    <tag>
+        <name>iterate</name>
+        <tag-class>
+            org.lxh.tagdemo.IterateTag
+        </tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <name>id</name>
+            <require>true</require>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>name</name>
+            <require>true</require>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>scope</name>
+            <require>true</require>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+    <tag>
+        <name>simpledate</name>
+        <tag-class>
+            org.lxh.tagdemo.SimpleDateTag
+        </tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>format</name>
+            <require>true</require>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
 </taglib>
