@@ -4,6 +4,15 @@ node_modules/
 .sass-cache/
 .ipynb_checkpoints/
 
+# J Idea
+*.iml
+target/
+
+# Eclipse
+.settings/
+bin/
+.classpath
+.project
 
 # Compiled class file
 *.class
