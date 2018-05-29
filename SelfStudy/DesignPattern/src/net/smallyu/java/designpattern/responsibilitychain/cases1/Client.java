@@ -12,13 +12,13 @@ public class Client {
             arrayList.add(new Women(rand.nextInt(4), "我要出去逛街"));
         }
         // 定义三个请示对象
-        IHandler father = new Father();
+//        IHandler father = new Father();
         IHandler hushand = new Husband();
         IHandler son = new Son();
         for(IWomen women : arrayList) {
             if(women.getType() ==1) {
                 System.out.println("\n----女儿向父亲请示");
-                father.HandleMessage(women);
+//                father.HandleMessage(women);
             } else if (women.getType() ==2) {
                 System.out.println("\n----妻子向丈夫请示");
                 hushand.HandleMessage(women);
