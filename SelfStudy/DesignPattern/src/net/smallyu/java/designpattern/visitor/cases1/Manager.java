@@ -11,5 +11,10 @@ public class Manager extends Employee {
     protected String getOtherInfo() {
         return "业绩：" + this.performance + "\t";
     }
+
+    @Override
+    public void accept(IVisitor visitor) {
+
+    }
 }
 
