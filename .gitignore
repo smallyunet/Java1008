@@ -4,6 +4,8 @@ node_modules/
 .sass-cache/
 .ipynb_checkpoints/
 
+dist/
+
 # J Idea
 *.iml
 target/
