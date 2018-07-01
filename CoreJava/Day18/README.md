@@ -7,3 +7,5 @@ thread
 file
 
 enum
+
+generics
