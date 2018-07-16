@@ -7,6 +7,8 @@
 
 - the-way-to-go —— 《GO入门指南》
 
+- es6 —— 《ECMAScript 6 入门》
+
 ---
 
 - junit4Demo —— 《Junit——Java单元测试必备工具》
