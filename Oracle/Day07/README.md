@@ -205,33 +205,34 @@ NOT     |     取反
 
 #### 选择
 
-```sql
-IF
-    IF语句语法格式：		
-    IF 布尔表达式 THEN
-        执行语句；
-    END IF;
-```
+IF语句语法格式：
 
 ```sql
+IF 布尔表达式 THEN
+    执行语句；
+END IF;
+```
+
 IF……ELSE
-    格式：
-    IF 布尔表达式 THEN
-            执行语句;
-    ELSE
-            执行语句;
-    END IF;
-```
 
 ```sql
-IF……ELSIF……ELSE
-    IF 布尔表达式 THEN
+格式：
+IF 布尔表达式 THEN
         执行语句;
-    ELSIF 布尔表达式 THEN
-            执行语句;
-    ELSE
-            执行语句;
-    END IF;
+ELSE
+        执行语句;
+END IF;
+```
+IF……ELSIF……ELSE
+
+```sql
+IF 布尔表达式 THEN
+    执行语句;
+ELSIF 布尔表达式 THEN
+        执行语句;
+ELSE
+        执行语句;
+END IF;
 ```
 
 #### CASE语句
