@@ -30,7 +30,18 @@ public class Test implements Iterable
         }
 //        l.forEach(l);
     }
-
 }
 
+class f {
+    final static String a = "1";
+}
+
+class s extends f {
+    final static String a = "2";
+
+    public static void main(String[] args) {
+        f t = new s();
+        System.out.println(t.a);
+    }
+}
 
