@@ -67,3 +67,52 @@ num = 125
 base = 8
 var newNum = mulBase(num, base)
 console.log(`${num} converted to base ${base} is ${newNum}`)
+
+/*************** 回文判断 ****************/
+function isPalindrome(word) {
+  var s = new Stack()
+  for (var i = 0; i < word.length; ++i) {
+    s.push(word[i])
+  }
+  var rword = ''
+  while (s.length() > 0) {
+    rword += s.pop()
+  }
+  if (word == rword) {
+    return true
+  } else {
+    return false
+  }
+}
+
+var word = 'helleh'
+if (isPalindrome(word)) {
+  console.log(`${word} is a palindrome`)
+}
+
+/*************** 计算递归 ****************/
+// use function
+function factorial(n) {
+  if (n === 0) {
+    return 1
+  } else {
+    return n * factorial(n-1)
+  }
+}
+
+// use stack
+function fact(n) {
+  var s = new Stack()
+  while (n > 1) {
+    s.push(n--)
+  }
+  var product = 1
+  while (s.length() > 0) {
+    product *= s.pop()
+  }
+  return product
+}
+
+console.log(factorial(5))
+console.log(fact(5))
+
