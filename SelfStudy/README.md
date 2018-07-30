@@ -13,7 +13,6 @@ byte-of-python | 《简明Python教程》
 the-way-to-go | 《GO入门指南》
 es6 | 《[ECMAScript 6 入门](http://es6.ruanyifeng.com/)》
 jsAlgorithm | 《数据结构与算法JavaScript描述》
-JavaConcurrency | 《Java并发编程实战》
 
 ### 网课类
 
