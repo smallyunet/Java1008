@@ -11,7 +11,7 @@ public class PropertiesDemo {
     public static void main(String[] args) throws IOException {
         Properties prop = new Properties();
         // 加载属性文件
-        prop.load(new FileInputStream("src/db.properties"));
+        prop.load(new FileInputStream("src/abc.p"));
 
         String driver = prop.getProperty("driver");
         String url = prop.getProperty("url");

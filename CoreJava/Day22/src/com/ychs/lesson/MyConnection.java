@@ -15,7 +15,7 @@ public class MyConnection {
 
     public static void initPools() {
         for (int i = 0; i < 3; i++) {
-            Connection conn = DBUtil.getConnection();
+            Connection conn = com.ychs.lesson.DBUtil.getConnection();
             pools.addLast(conn);
         }
     }
