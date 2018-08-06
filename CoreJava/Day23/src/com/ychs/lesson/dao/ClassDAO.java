@@ -5,6 +5,7 @@ import com.ychs.lesson.util.DBUtil;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
+import org.junit.Test;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -77,6 +78,22 @@ public class ClassDAO {
         }
         return classes;
     }
+
+    @Test
+    public  void delClazzById() throws SQLException {
+        int res = 0;
+        QueryRunner qr = new QueryRunner(DBUtil.getDataSoutce());
+        String sql = "delete from class where id =2";
+        //String sql = "delete from class(id) values(?)";删除语句错误
+        res = qr.update(sql);
+        System.out.println(res);
+        if(res>0) {
+            System.out.println("删除成功");
+        }else {
+            System.out.println("删除失败");
+        }
+    }
+
 
 }
 
