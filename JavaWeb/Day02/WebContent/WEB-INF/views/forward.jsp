@@ -8,8 +8,9 @@
 </head>
 <body>
 <%
-	Object username = request.getAttribute("username");
+	Object username = session.getAttribute("username");
 %>
 <h1><%=username %></h1>
+<span>当前用户【<%=session.getAttribute("username") %>】</span>
 </body>
 </html>

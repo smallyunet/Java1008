@@ -15,6 +15,7 @@
 					<input class="layui-input" type="text" name="username" requierd placeholder="请输入用户名">
 				</div>
 				<span class="layui-form-mid" style="color:red">*</span>
+				<span class="layui-form-mid" style="color:red"></span>
 			</div>
 			<div class="layui-form-item">
 				<label for="" class="layui-form-label">密码</label>
@@ -30,5 +31,18 @@
 			</div>
 		</form>
 		<script src="./resources/layui/layui.js"></script>
+		<script>
+			layui.use(['layer', 'jquery'], function() {
+				var layer = layui.layer
+				var $ = layui.jquery
+				
+				var error = "<%=session.getAttribute("error") %>"
+				if(error != 'null') {
+					// alert(error)
+					layer.msg(error)
+					$('span').eq(1).html(error)
+				}
+			})
+		</script>
 	</body>
 </html>
