@@ -7,10 +7,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%
-		String user = session.getAttribute("user").toString();
-		String username = (String) request.getParameter("user");
-	%>
-	<%=user %>
+<ul>
+<%
+	String[] filenames = (String[]) request.getAttribute("filenames");
+	for (String filename : filenames) {
+%>
+		<li><a href="DownloadServlet?filename=<%=filename %>"><%=filename %></a></li>
+<%
+	}
+%>
+</ul>
 </body>
 </html>

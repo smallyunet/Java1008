@@ -1,4 +1,4 @@
-package filter;
+package com.ychs168.java.filter;
 
 import java.io.IOException;
 import javax.servlet.Filter;
@@ -44,7 +44,7 @@ public class EncodingFilter implements Filter {
 		request.setCharacterEncoding(this.encoding);
 		response.setCharacterEncoding(this.encoding);
 		
-		logger.debug("Enter EncodingFilter");
+//		logger.debug("Enter EncodingFilter");
 		
 		chain.doFilter(request, response);
 	}

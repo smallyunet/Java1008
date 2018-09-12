@@ -7,10 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%
-		String user = session.getAttribute("user").toString();
-		String username = (String) request.getParameter("user");
-	%>
-	<%=user %>
+jingli
 </body>
 </html>
