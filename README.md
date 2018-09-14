@@ -11,10 +11,6 @@
 
 - Oracle （Oracle课堂内容）
 
-- SelfStudy
+- SelfStudy （一些自学内容）
 
 - TypingSpeed （金山打字测速）
-
-## 其它
-
-- [寻常的路](https://www.yuque.com/smallyu/summary) （技术笔记、总结与思考）
