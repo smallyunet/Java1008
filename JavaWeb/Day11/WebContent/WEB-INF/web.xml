@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>Day11</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>StudentManagerServlet</display-name>
+    <servlet-name>StudentManagerServlet</servlet-name>
+    <servlet-class>com.ychs168.java.servlet.StudentManagerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StudentManagerServlet</servlet-name>
+    <url-pattern>/StudentManagerServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>TableServlet</display-name>
+    <servlet-name>TableServlet</servlet-name>
+    <servlet-class>com.ychs168.java.servlet.TableServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TableServlet</servlet-name>
+    <url-pattern>/TableServlet</url-pattern>
+  </servlet-mapping>
+</web-app>

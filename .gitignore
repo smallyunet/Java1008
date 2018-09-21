@@ -3,6 +3,7 @@ node_modules/
 .vscode/
 .sass-cache/
 .ipynb_checkpoints/
+layui/
 
 dist/
 
